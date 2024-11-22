@@ -1,0 +1,52 @@
+﻿<Window x:Class="Fstore.TicketDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add New Ticket" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen" 
+        Background="#F0F0F0" WindowStyle="None" AllowsTransparency="True">
+
+    <Border CornerRadius="15" Background="White" BorderBrush="#DDD" BorderThickness="1">
+        <Grid>
+            <!-- Title Bar -->
+            <DockPanel Background="#007ACC" Height="40" VerticalAlignment="Top" LastChildFill="False">
+                <TextBlock Text="Add New Ticket" Foreground="White" FontSize="16" FontWeight="Bold" 
+                           VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0"/>
+                <Button Content="X" Width="35" Height="35" Background="Transparent" Foreground="White" 
+                        BorderThickness="0" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Click="CloseWindow_Click" Cursor="Hand" Margin="450,0,10,0"/>
+            </DockPanel>
+
+            <!-- Ticket Detail Form -->
+            <StackPanel Margin="20,60,20,20">
+                <Label Content="Select Title:" FontWeight="Medium" />
+                <!-- ComboBox for Titles -->
+                <ComboBox x:Name="txtTitle" Height="35" FontSize="14" 
+                          Background="#F5F5F5" BorderBrush="#CCCCCC" 
+                          BorderThickness="1" Padding="5" SelectionChanged="txtTitle_SelectionChanged" />
+
+                <Label Content="Description:" FontWeight="Medium" Margin="0,10,0,0"/>
+                <TextBox x:Name="txtDescription" Height="100" FontSize="14" 
+                         Background="#F5F5F5" BorderBrush="#CCCCCC" 
+                         BorderThickness="1" Padding="5" AcceptsReturn="True" TextWrapping="Wrap"/>
+
+                <Label Content="Priority:" FontWeight="Medium" Margin="0,10,0,0"/>
+                <ComboBox x:Name="cmbPriority" Height="35" FontSize="14" 
+                          Background="#F5F5F5" BorderBrush="#CCCCCC" 
+                          BorderThickness="1" Margin="0,0,0,10">
+                    <ComboBoxItem Content="Low"/>
+                    <ComboBoxItem Content="Medium"/>
+                    <ComboBoxItem Content="High"/>
+                </ComboBox>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnSave" Content="Save" Width="100" Height="35" 
+                            Background="#28A745" Foreground="White" FontWeight="Bold" 
+                            Click="btnSave_Click" Cursor="Hand" Margin="5,0,0,0"/>
+                    <Button x:Name="btnCancel" Content="Cancel" Width="100" Height="35" 
+                            Background="#E5E5E5" Foreground="#333" FontWeight="Bold" 
+                            Click="btnCancel_Click" Cursor="Hand" Margin="5,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

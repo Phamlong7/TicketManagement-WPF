@@ -1,0 +1,84 @@
+﻿<Window x:Class="Fstore.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FStore - Login" Height="340" Width="420"
+        WindowStartupLocation="CenterScreen" 
+        Background="#F0F0F0" WindowStyle="None" AllowsTransparency="True">
+
+    <Grid>
+        <!-- Outer Border for the Form -->
+        <Border CornerRadius="15" Background="White" BorderBrush="#DDDDDD" BorderThickness="1" Padding="0">
+            <Grid>
+                <!-- Title Bar with Close Button -->
+                <DockPanel Background="#007ACC" Height="40" VerticalAlignment="Top" LastChildFill="False">
+                    <!-- Title -->
+                    <TextBlock Text="FStore - Login" Foreground="White" FontSize="16" FontWeight="Bold" 
+                               VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0"/>
+
+                    <!-- Close Button on the Right -->
+                    <Button Content="X" Width="35" Height="35" Background="Transparent" Foreground="White" 
+                            BorderThickness="0" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"
+                            Click="CloseWindow_Click" Cursor="Hand" Margin="270,0,10,0" RenderTransformOrigin="0.514,0.586"/>
+                </DockPanel>
+
+                <!-- Main Form Content -->
+                <StackPanel Margin="20,50,20,20">
+                    <!-- Email Label and TextBox -->
+                    <TextBlock Text="Email" FontWeight="Bold" FontSize="14" Foreground="#444444" Margin="0,10,0,5"/>
+                    <TextBox x:Name="txtEmail" Height="35" FontSize="14"
+                             Background="#F5F5F5" BorderBrush="#CCCCCC" BorderThickness="1" 
+                             Padding="5" HorizontalAlignment="Stretch"/>
+
+                    <!-- Password Label and PasswordBox -->
+                    <TextBlock Text="Password" FontWeight="Bold" FontSize="14" Foreground="#444444" Margin="0,15,0,5"/>
+                    <PasswordBox x:Name="txtPassword" Height="35" FontSize="14"
+                                 Background="#F5F5F5" BorderBrush="#CCCCCC" BorderThickness="1" 
+                                 Padding="5" HorizontalAlignment="Stretch"/>
+
+                    <!-- Login and Cancel Buttons -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                        <!-- Login Button with Margin -->
+                        <Button x:Name="btnLogin" Content="Login" Width="120" Height="35" FontSize="14" 
+                                Background="#007ACC" Foreground="White" BorderThickness="0" 
+                                Cursor="Hand" Padding="5" Margin="0,0,20,0" Click="btnLogin_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                            CornerRadius="8">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <!-- Cancel Button with Margin -->
+                        <Button x:Name="btnCancel" Content="Cancel" Width="120" Height="35" FontSize="14" 
+                                Background="White" Foreground="#555555" BorderBrush="#CCCCCC" 
+                                Cursor="Hand" Padding="5" Click="btnCancel_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                            CornerRadius="8" BorderBrush="{TemplateBinding BorderBrush}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+
+                    <!-- Register and Forgot Password Links with Margin -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                        <TextBlock HorizontalAlignment="Left" Foreground="#007ACC" Cursor="Hand" 
+                                   MouseLeftButtonDown="Register_Click" TextDecorations="Underline" FontWeight="Bold" Margin="0,0,40,0">
+                            Create an Account
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Foreground="#007ACC" Cursor="Hand" 
+                                   MouseLeftButtonDown="ForgotPassword_Click" TextDecorations="Underline" FontWeight="Bold">
+                            Forgot Password?
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

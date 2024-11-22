@@ -1,0 +1,95 @@
+﻿<Window x:Class="Fstore.AddTicketForUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Ticket" Height="520" Width="600"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5" WindowStyle="None" AllowsTransparency="True">
+
+    <Border CornerRadius="10" Background="White" BorderBrush="#DDD" BorderThickness="1">
+        <StackPanel Margin="20">
+
+            <!-- Custom Title Bar with Close Button -->
+            <DockPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <TextBlock Text="Add Ticket"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="#333"
+                           Margin="10,10,0,10"
+                           DockPanel.Dock="Left" />
+                <Button Content="✕"
+                        Width="30"
+                        Height="30"
+                        FontSize="14"
+                        Background="Transparent"
+                        Foreground="#888"
+                        BorderBrush="Transparent"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Cursor="Hand"
+                        Click="CloseButton_Click"
+                        DockPanel.Dock="Right"/>
+            </DockPanel>
+
+            <!-- User Name Display -->
+            <TextBlock x:Name="UserNameTextBlock" 
+                       Text="User: [UserName]" 
+                       FontSize="16" 
+                       Foreground="#666" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,5,0,10"/>
+
+            <!-- Ticket Input Section -->
+            <StackPanel Margin="0,10">
+                <!-- Ticket Title (ComboBox) -->
+                <Label Content="Ticket Title:" FontWeight="Medium"/>
+                <ComboBox x:Name="ticketTitleComboBox"
+                          Height="40" 
+                          Background="#F9F9F9" 
+                          BorderBrush="#CCC" 
+                          BorderThickness="1"
+                          Margin="0,0,0,10"
+                          VerticalContentAlignment="Center" />
+                <!-- Bind to Titles collection in code-behind -->
+
+                <!-- Ticket Description -->
+                <Label Content="Ticket Description:" Margin="0,10,0,5" FontWeight="Medium"/>
+                <TextBox x:Name="ticketDescriptionTextBox" 
+                         Height="80" 
+                         Background="#F9F9F9" 
+                         BorderBrush="#CCC" 
+                         BorderThickness="1" 
+                         VerticalContentAlignment="Top" 
+                         Padding="10"
+                         AcceptsReturn="True" 
+                         VerticalScrollBarVisibility="Auto"/>
+
+                <!-- Priority Selection -->
+                <Label Content="Priority:" Margin="0,15,0,5" FontWeight="Medium"/>
+                <ComboBox x:Name="priorityComboBox" 
+                          Background="#F9F9F9" 
+                          BorderBrush="#CCC" 
+                          BorderThickness="1" 
+                          Margin="0,0,0,10">
+                    <ComboBoxItem Content="Low" />
+                    <ComboBoxItem Content="Medium" />
+                    <ComboBoxItem Content="High" />
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Submit and Cancel Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Content="Add Ticket" 
+                        Width="100" Height="35" 
+                        Background="#007ACC" Foreground="White" 
+                        FontWeight="Bold" Cursor="Hand" 
+                        Click="AddTicketButton_Click" />
+                <Button Content="Cancel" 
+                        Width="100" Height="35" 
+                        Background="#E5E5E5" Foreground="#333" 
+                        FontWeight="Bold" Cursor="Hand" 
+                        Margin="10,0,0,0" 
+                        Click="CancelButton_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

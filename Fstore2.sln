@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fstore2", "Fstore2\Fstore2.csproj", "{2F95F4A2-33E5-45E1-B122-FBA49C12673B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fstore.DAL", "Fstore.DAL\Fstore.DAL.csproj", "{ADDA2541-C597-49F1-9EFB-55D8767737D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fstore.BLL", "Fstore.BLL\Fstore.BLL.csproj", "{B5FCC61C-EEFE-473F-A7E9-4986BFFF5A41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F95F4A2-33E5-45E1-B122-FBA49C12673B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F95F4A2-33E5-45E1-B122-FBA49C12673B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F95F4A2-33E5-45E1-B122-FBA49C12673B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F95F4A2-33E5-45E1-B122-FBA49C12673B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDA2541-C597-49F1-9EFB-55D8767737D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDA2541-C597-49F1-9EFB-55D8767737D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDA2541-C597-49F1-9EFB-55D8767737D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDA2541-C597-49F1-9EFB-55D8767737D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5FCC61C-EEFE-473F-A7E9-4986BFFF5A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5FCC61C-EEFE-473F-A7E9-4986BFFF5A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5FCC61C-EEFE-473F-A7E9-4986BFFF5A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5FCC61C-EEFE-473F-A7E9-4986BFFF5A41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBFCC723-B9CE-43B1-9269-87EC948EF9E3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,83 @@
+﻿<Window x:Class="Fstore.UserTicketHistory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="User Ticket History" Height="450" Width="700"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+
+    <Grid Margin="20">
+        <!-- Header -->
+        <TextBlock Text="Your Ticket History" 
+                   FontSize="26" FontWeight="Bold" 
+                   Foreground="#333" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,20,0,10"/>
+
+        <!-- DataGrid for displaying tickets -->
+        <DataGrid x:Name="ticketHistoryDataGrid" 
+                  AutoGenerateColumns="False" 
+                  Margin="0,60,0,0" 
+                  Height="300" 
+                  Background="White" 
+                  BorderBrush="#CCC" 
+                  BorderThickness="1" 
+                  AlternatingRowBackground="#F9F9F9"
+                  IsReadOnly="True" 
+                  SelectionMode="Single"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="100"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*"/>
+                <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="100"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Created At" Binding="{Binding CreatedAt, StringFormat='{}{0:MM/dd/yyyy}'}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Button Panel placed below the DataGrid -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Bottom">
+            <Button x:Name="reloadButton" 
+                    Content="Reload" 
+                    Width="100" 
+                    Height="35" 
+                    Background="#4CAF50" 
+                    Foreground="White" 
+                    FontWeight="Bold" 
+                    Cursor="Hand" 
+                    Margin="0,70,10,0" 
+                    Click="ReloadButton_Click"/>
+
+            <Button x:Name="addTicketButton" 
+                    Content="Add Ticket" 
+                    Width="100" 
+                    Height="35" 
+                    Background="#007ACC" 
+                    Foreground="White" 
+                    FontWeight="Bold" 
+                    Cursor="Hand" 
+                    Margin="0,70,10,0"
+                    Click="AddTicketButton_Click"/>
+
+            <Button x:Name="logoutButton" 
+            Content="Logout" 
+            Width="100" 
+            Height="35" 
+            Background="#DC3545" 
+            Foreground="White" 
+            FontWeight="Bold" 
+            Cursor="Hand" 
+            Margin="0,70,10,0" 
+            Click="LogoutButton_Click"/>
+
+            <Button x:Name="closeButton" 
+                    Content="Close" 
+                    Width="100" 
+                    Height="35" 
+                    Background="#E5E5E5" 
+                    Foreground="#333" 
+                    FontWeight="Bold" 
+                    Cursor="Hand" 
+                    Click="CloseButton_Click" Margin="0,70,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
